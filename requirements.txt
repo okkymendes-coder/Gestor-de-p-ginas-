@@ -1,0 +1,2 @@
+# Requisitos básicos para o Page Agent
+# Basic requirements for Page Agent
