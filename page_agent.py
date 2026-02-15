@@ -5,6 +5,7 @@ Um agente inteligente para gerenciar páginas
 
 import json
 import os
+import re
 from datetime import datetime
 from typing import Dict, List, Optional
 
@@ -179,7 +180,6 @@ class PageAgent:
     
     def _generate_page_id(self, title: str) -> str:
         """Gera um ID único para a página baseado no título e timestamp."""
-        import re
         # Remove caracteres especiais e espaços
         clean_title = re.sub(r'[^\w\s-]', '', title.lower())
         clean_title = re.sub(r'[-\s]+', '-', clean_title)

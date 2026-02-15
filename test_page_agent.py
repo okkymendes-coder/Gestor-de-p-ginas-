@@ -65,11 +65,11 @@ def test_delete_page():
     
     # Create and delete
     page = agent.create_page("To Delete", "Content")
-    assert agent.delete_page(page["id"]) == True
+    assert agent.delete_page(page["id"])
     assert agent.read_page(page["id"]) is None
     
     # Try to delete non-existent page
-    assert agent.delete_page("non-existent") == False
+    assert not agent.delete_page("non-existent")
     
     # Cleanup
     shutil.rmtree(test_storage)
