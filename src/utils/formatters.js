@@ -1,12 +1,12 @@
 export const formatCurrency = (value) => {
-  return new Intl.NumberFormat('pt-BR', {
+  return new Intl.NumberFormat('pt-PT', {
     style: 'currency',
     currency: 'EUR',
   }).format(value);
 };
 
 export const formatNumber = (value) => {
-  return new Intl.NumberFormat('pt-BR').format(value);
+  return new Intl.NumberFormat('pt-PT').format(value);
 };
 
 export const formatPercentage = (value) => {
